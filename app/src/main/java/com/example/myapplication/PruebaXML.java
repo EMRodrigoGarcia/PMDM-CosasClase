@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -22,11 +23,12 @@ public class PruebaXML extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int c = Color.BLUE;
-                if (Math.random() < 0.25) {
+                double rand = Math.random();
+                if (rand < 0.25) {
                    c = Color.RED;
-                }else if (Math.random() > 0.25 && Math.random() < 0.5) {
+                }else if (rand > 0.25 && rand < 0.5) {
                     c = Color.YELLOW;
-                }else if(Math.random() > 0.5 && Math.random() < 0.75) {
+                }else if(rand > 0.5 && rand < 0.75) {
                     c = Color.GREEN;
                 }
                 t.setTextColor(c);
