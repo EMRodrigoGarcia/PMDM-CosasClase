@@ -31,6 +31,7 @@ public class PruebaXML extends AppCompatActivity {
                 }else if(rand > 0.5 && rand < 0.75) {
                     c = Color.GREEN;
                 }
+
                 t.setTextColor(c);
             }
         });
