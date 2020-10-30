@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">PMDM</string>
+    <string name="texto_textview"> Texto TextView</string>
+    <string name="texto_boton"> Texto Boton </string>
 </resources>
