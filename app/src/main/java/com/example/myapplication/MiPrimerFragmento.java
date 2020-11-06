@@ -22,37 +22,37 @@ public class MiPrimerFragmento extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Log.i("Tag", "MiPrimerFragmento.onStart");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onStart");
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("Tag", "MiPrimerFragmento.onCreate");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onCreate");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.i("Tag", "MiPrimerFragmento.onResume");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onResume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        Log.i("Tag", "MiPrimerFragmento.onPause");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onPause");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        Log.i("Tag", "MiPrimerFragmento.onStop");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onStop");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.i("Tag", "MiPrimerFragmento.onDestroy");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onDestroy");
     }
 
     TextView tv;
@@ -62,7 +62,7 @@ public class MiPrimerFragmento extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("Tag", "MiPrimerFragmento.onCreateView");
+        Log.i("PruebaFragmentos", "MiPrimerFragmento.onCreateView");
         // Inflate the layout for this fragment
         View vista =  inflater.inflate(R.layout.fragment_mi_primer_fragmento, container, false);
         tv = vista.findViewById(R.id.labelFragmento);
@@ -76,5 +76,9 @@ public class MiPrimerFragmento extends Fragment {
         });
 
         return vista;
+    }
+
+    public void setMensaje(String mensaje) {
+        tv.setText(mensaje);
     }
 }
