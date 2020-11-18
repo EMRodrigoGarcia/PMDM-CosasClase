@@ -12,8 +12,8 @@ import androidx.lifecycle.ViewModel;
 public class A1_SharedViewModel extends ViewModel {
     private MutableLiveData<Integer> color = new MutableLiveData<>();
 
-    public LiveData<Integer> getColor() {
-        return color;
+    public int getColor() {
+        return color.getValue().intValue();
     }
     public void setColor(Integer color) {
         this.color.setValue(color);
