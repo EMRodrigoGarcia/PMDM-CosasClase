@@ -25,6 +25,7 @@ public class FragmentoTragaperras extends Fragment {
     TextView label1;
     TextView label2;
     TextView label3;
+
     public FragmentoTragaperras() {
         // Required empty public constructor
     }
@@ -46,7 +47,7 @@ public class FragmentoTragaperras extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =  inflater.inflate(R.layout.fragment_fragmento_tragaperras, container, false);
+        View v = inflater.inflate(R.layout.fragment_fragmento_tragaperras, container, false);
         label1 = v.findViewById(R.id.labelFrag1);
         label2 = v.findViewById(R.id.labelFrag2);
         label3 = v.findViewById(R.id.labelFrag3);
@@ -76,15 +77,15 @@ public class FragmentoTragaperras extends Fragment {
 
     public String generarTirada(View v) {
         String tirada = "";
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
 
             int n = rand(1, 4);
-            Log.i("Random", "" + n );
-            if(n == 1) {
+            Log.i("Random", "" + n);
+            if (n == 1) {
                 tirada += "A ";
-            }else if (n == 2) {
+            } else if (n == 2) {
                 tirada += "B ";
-            }else if (n == 3) {
+            } else if (n == 3) {
                 tirada += "C ";
             }
             colocarLabels(i, n);
@@ -93,7 +94,6 @@ public class FragmentoTragaperras extends Fragment {
 
         return tirada;
     }
-
 
 
     public int generarPremio(String mensaje) {
@@ -110,6 +110,7 @@ public class FragmentoTragaperras extends Fragment {
         }
         return premio;
     }
+
     public int rand(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
@@ -117,7 +118,7 @@ public class FragmentoTragaperras extends Fragment {
 
     CuandoPulseBotonListener elManejador;
 
-    public void estableceManejadorEvento(CuandoPulseBotonListener manejador){
+    public void estableceManejadorEvento(CuandoPulseBotonListener manejador) {
         elManejador = manejador;
     }
 
@@ -126,25 +127,25 @@ public class FragmentoTragaperras extends Fragment {
         if (i == 0) {
             if (n == 1) {
                 label1.setText("A");
-            }else if (n == 2) {
+            } else if (n == 2) {
                 label1.setText("B");
-            }else if (n == 3){
+            } else if (n == 3) {
                 label1.setText("C");
             }
-        }else if (i == 1) {
-            if (n ==1) {
+        } else if (i == 1) {
+            if (n == 1) {
                 label2.setText("A");
-            }else if (n == 2) {
+            } else if (n == 2) {
                 label2.setText("B");
-            }else if (n == 3){
+            } else if (n == 3) {
                 label2.setText("C");
             }
-        }else if (i == 2) {
-            if (n ==1) {
+        } else if (i == 2) {
+            if (n == 1) {
                 label3.setText("A");
-            }else if (n == 2) {
+            } else if (n == 2) {
                 label3.setText("B");
-            }else if(n == 3) {
+            } else if (n == 3) {
                 label3.setText("C");
             }
         }

@@ -10,9 +10,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MaquinaTragaperras2 extends AppCompatActivity
-implements FragmentoTragaperras.CuandoPulseBotonListener{
+        implements FragmentoTragaperras.CuandoPulseBotonListener {
     Button reiniciar;
     FragmentoTragaperras frag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
