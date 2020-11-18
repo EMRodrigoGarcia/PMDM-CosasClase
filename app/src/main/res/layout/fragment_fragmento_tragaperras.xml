@@ -7,34 +7,33 @@
     tools:context=".FragmentoTragaperras" >
 
     <TextView
-        android:id="@+id/label1"
+        android:id="@+id/labelFrag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="tragaperras"
         android:tag="tragaperras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154" />
 
     <TextView
-        android:id="@+id/label2"
+        android:id="@+id/labelFrag2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
         android:contentDescription="tragaperras"
         android:tag="tragaperras"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/label1"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154" />
 
     <TextView
-        android:id="@+id/label3"
+        android:id="@+id/labelFrag3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -43,8 +42,7 @@
         android:tag="tragaperras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toEndOf="@+id/label1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154" />
 
@@ -56,5 +54,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label1" />
+        app:layout_constraintTop_toBottomOf="@+id/labelFrag1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

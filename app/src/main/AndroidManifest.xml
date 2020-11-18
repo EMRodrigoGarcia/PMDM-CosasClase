@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".A1_ActivityPruebaFrags"></activity>
-        <activity android:name=".A1_ClaseViewModel" />
-        <activity android:name=".A1_ActividadFragmentos" />
-        <activity android:name=".MaquinaTragaperras">
+        <activity android:name=".MaquinaTragaperras2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

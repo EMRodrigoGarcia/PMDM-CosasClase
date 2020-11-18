@@ -31,9 +31,10 @@ public class A1_Frag1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_a1__frag1, container, false);
-        tv = v.findViewById(R.id.textView5);
-        A1_SharedViewModel model = new ViewModelProvider(requireActivity()).get(A1_SharedViewModel.class);
-        model.getColor().observe(getViewLifecycleOwner(), {colorI -> tv.setTextColor(colorI)});
+     /*   tv = v.findViewById(R.id.textView5);
+        viewModel = new ViewModelProvider(requireActivity()).get(A1_SharedViewModel.class);
+        viewModel.getColor().observe(getViewLifecycleOwner(), tv.setTextColor(viewModel.getColor().getValue()));
+       */
         return v;
     }
 }

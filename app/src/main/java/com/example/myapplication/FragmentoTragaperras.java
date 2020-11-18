@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,9 @@ import static android.view.View.FIND_VIEWS_WITH_CONTENT_DESCRIPTION;
 
 public class FragmentoTragaperras extends Fragment {
 
-
+    TextView label1;
+    TextView label2;
+    TextView label3;
     public FragmentoTragaperras() {
         // Required empty public constructor
     }
@@ -33,11 +36,20 @@ public class FragmentoTragaperras extends Fragment {
 
     }
 
+    public void reiniciar() {
+        label1.setText("");
+        label2.setText("");
+        label3.setText("");
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_fragmento_tragaperras, container, false);
+        label1 = v.findViewById(R.id.labelFrag1);
+        label2 = v.findViewById(R.id.labelFrag2);
+        label3 = v.findViewById(R.id.labelFrag3);
         v.findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,8 +69,7 @@ public class FragmentoTragaperras extends Fragment {
 
         int premio = 0;
         premio = generarPremio(mensaje);
-
-        if (elManejador != null) {
+        if (elManejador != null && premio > 0) {
             elManejador.hanPulsadoElBoton(mensaje, premio);
         }
     }
@@ -66,7 +77,9 @@ public class FragmentoTragaperras extends Fragment {
     public String generarTirada(View v) {
         String tirada = "";
         for(int i = 0; i < 3; i++) {
-            int n = rand(4,1);
+
+            int n = rand(1, 4);
+            Log.i("Random", "" + n );
             if(n == 1) {
                 tirada += "A ";
             }else if (n == 2) {
@@ -74,10 +87,13 @@ public class FragmentoTragaperras extends Fragment {
             }else if (n == 3) {
                 tirada += "C ";
             }
+            colocarLabels(i, n);
+
         }
 
         return tirada;
     }
+
 
 
     public int generarPremio(String mensaje) {
@@ -94,8 +110,8 @@ public class FragmentoTragaperras extends Fragment {
         }
         return premio;
     }
-    public int rand(int max, int min) {
-        return (int) Math.random() * (max - min + 1) + min;
+    public int rand(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 
 
@@ -105,5 +121,33 @@ public class FragmentoTragaperras extends Fragment {
         elManejador = manejador;
     }
 
+
+    private void colocarLabels(int i, int n) {
+        if (i == 0) {
+            if (n == 1) {
+                label1.setText("A");
+            }else if (n == 2) {
+                label1.setText("B");
+            }else if (n == 3){
+                label1.setText("C");
+            }
+        }else if (i == 1) {
+            if (n ==1) {
+                label2.setText("A");
+            }else if (n == 2) {
+                label2.setText("B");
+            }else if (n == 3){
+                label2.setText("C");
+            }
+        }else if (i == 2) {
+            if (n ==1) {
+                label3.setText("A");
+            }else if (n == 2) {
+                label3.setText("B");
+            }else if(n == 3) {
+                label3.setText("C");
+            }
+        }
+    }
 
 }
