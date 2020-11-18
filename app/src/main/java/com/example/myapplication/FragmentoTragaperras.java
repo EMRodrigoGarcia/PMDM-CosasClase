@@ -52,9 +52,11 @@ public class FragmentoTragaperras extends Fragment {
     }
 
     public void botonPulsado(View v) {
-        String mensaje = generarTirada(v);
+        String mensaje = "";
+        mensaje = generarTirada(v);
 
-        int premio = generarPremio(mensaje);
+        int premio = 0;
+        premio = generarPremio(mensaje);
 
         if (elManejador != null) {
             elManejador.hanPulsadoElBoton(mensaje, premio);
@@ -63,31 +65,14 @@ public class FragmentoTragaperras extends Fragment {
 
     public String generarTirada(View v) {
         String tirada = "";
-        int[] nums = new int[3];
-
-        TextView[] arr = { v.findViewById(R.id.label1), v.findViewById(R.id.label2), v.findViewById(R.id.label3)};
-        ArrayList<TextView> outputViews = new ArrayList<>();
-        Collections.addAll(outputViews, arr);
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = rand(4, 1);
-        }
-        System.out.println(outputViews);
-
-        for(int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
+        for(int i = 0; i < 3; i++) {
+            int n = rand(4,1);
+            if(n == 1) {
                 tirada += "A ";
-               TextView t = outputViews.get(i);
-                t.setText("A");
-
-            }else if (nums[i] == 2) {
+            }else if (n == 2) {
                 tirada += "B ";
-                TextView t = outputViews.get(i);
-                t.setText("B");
-
-            }else if (nums[i] == 3) {
+            }else if (n == 3) {
                 tirada += "C ";
-                TextView t = outputViews.get(i);
-                t.setText("C");
             }
         }
 
