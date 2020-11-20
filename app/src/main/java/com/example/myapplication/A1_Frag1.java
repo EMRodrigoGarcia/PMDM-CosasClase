@@ -39,7 +39,6 @@ public class A1_Frag1 extends Fragment {
         tv = v.findViewById(R.id.textView5);
         return v;
     }
-    //TODO: Hacer que se comuniquen los dos fragmentos
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

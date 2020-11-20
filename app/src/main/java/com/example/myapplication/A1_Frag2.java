@@ -30,7 +30,6 @@ public class A1_Frag2 extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-    //TODO: Hacer que se comuniquen los fragmentos
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
