@@ -18,7 +18,9 @@ public class A1_SharedViewModel extends ViewModel {
     public void setColor(Integer color) {
         this.color.setValue(color);
     }
-
+    public MutableLiveData<Integer> getObjColor() {
+        return this.color;
+    }
 
 
 }
