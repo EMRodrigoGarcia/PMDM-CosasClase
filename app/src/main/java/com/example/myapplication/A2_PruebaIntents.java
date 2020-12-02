@@ -49,6 +49,12 @@ public class A2_PruebaIntents extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void clickIntentOtra(View v) {
+        Intent i = new Intent(this, A2_OtraActivity.class);
+        i.putExtra("mensaje1", "Hola desde actividad 1");
+        startActivity(i);
+    }
+
     public void clickVibrar(View v) {
         Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         vib.vibrate(400);
