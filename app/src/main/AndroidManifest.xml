@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".A2_OtraActivity"></activity>
-        <activity android:name=".A2_PruebaIntents">
+        <activity android:name=".A3_Resultado"></activity>
+        <activity android:name=".A3_Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
