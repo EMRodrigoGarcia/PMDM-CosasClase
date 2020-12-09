@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".A3_Resultado"></activity>
-        <activity android:name=".A3_Principal">
+        <activity android:name=".A4_Operacion"></activity>
+        <activity android:name=".A4_Numero" />
+        <activity android:name=".A4_Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
