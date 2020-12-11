@@ -50,6 +50,24 @@ public class A4_Principal extends AppCompatActivity {
         startActivityForResult(i, codigoActividadOperacion);
     }
 
+    public void onClickResultado(View v) {
+        int resultado = 0;
+        switch(op) {
+            case '+':
+            resultado = n1 + n2;
+            break;
+            case '-':
+                resultado = n1 - n2;
+                break;
+            case '*':
+                resultado = n1 * n2;
+                break;
+            default:
+                resultado = n1 / n2;
+        }
+        labelResult.setText("Resultado: " + Integer.toString(resultado));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -57,14 +75,17 @@ public class A4_Principal extends AppCompatActivity {
         if (requestCode == codigoActividadNumero) {
             if (botonNPulsado) {
                 n1 = data.getIntExtra("numero", 0);
+                labelN1.setText(Integer.toString(n1));
             }else {
                 n2 = data.getIntExtra("numero", 0);
+                labelN2.setText(Integer.toString(n2));
             }
 
             Log.i("nValores SAFR", "N1: " + n1 + ", N2: " + n2);
         }else if (requestCode == codigoActividadOperacion) {
             if (resultCode == Activity.RESULT_OK) {
                 op = data.getCharExtra("op", '+');
+                labelOp.setText(op + "");
             }
         }
     }
